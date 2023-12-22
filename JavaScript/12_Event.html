@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learing event in js</title>
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Amazing image</h2>
+
+    <h1>My name</h1>
+
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <li><img width="200px" id="IMG" /></li>
+
+    <button id="stop1">STOP</button>
+
+    <hr />
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // const photoshop = document.querySelector("#photoshop")
+    // const ul = document.querySelector("#images")
+    // owl.addEventListener("click", function (ev) {
+    //     alert("owl is clicked !");
+    //     console.log(ev);
+    // })
+
+    // photoshop.addEventListener( "click", (ev) => {
+    //     alert("photoshop clicked");
+
+    // }, false )
+    // ul.addEventListener( "click", (ev) => {
+    //     console.log("clicked inside of ul");
+    // }, false )
+
+    // photoshop.addEventListener("click", (ev) => {
+    //     console.log("photoshop clicked");
+    //     // ev.stopPropagation()
+    // }, true)
+    // ul.addEventListener("click", (ev) => {
+    //     console.log("clicked inside of ul");
+    //     // ev.stopPropagation()
+    // }, true)
+
+    // ul.addEventListener("click", function (e) {
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === "IMG") {
+    //         const removeit = e.target.parentNode
+    //     console.log(removeit);
+    //     removeit.remove()
+    //     }
+    // }, false )
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // const sayMyName = function(){
+    //     console.log("Ashish");
+    // }
+
+    // const changeText = function(){
+    //     document.querySelector('h1').innerHTML = "Hello everyone!"
+    // }
+
+    // function myImg() {
+    //     document.querySelector("#IMG").setAttribute("src", "https://scontent.fdbd5-1.fna.fbcdn.net/v/t39.30808-6/309392732_651675442973885_7295911612330307153_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MSGw4cl2aacAX8FAL-K&_nc_ht=scontent.fdbd5-1.fna&oh=00_AfAN_xAyOTjB82hmEduXdb5QgHceQh9SVei0_9siuBMgeQ&oe=654064BA")
+    // }
+
+    // const changeMe = setTimeout(changeText, 4000)
+
+    // setTimeout(myImg, 5000)
+
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout(changeMe)
+    //     console.log("STOPPED")
+    // })
+
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // const printMyName = setInterval(() => {
+    //     console.log("Atul", Date.now());
+    // }, 2000);
+
+    // clearInterval(printMyName);
+
+    //===============================================================
+
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    let myIntervalId;
+
+    const myInterval = function () {
+      myIntervalId = setInterval(() => {
+        console.log("Atul", Date.now());
+      }, 2000);
+    };
+    const myClear = function () {
+      clearInterval(myInterval);
+    };
+
+    start.addEventListener("click", () => {
+      myInterval();
+    });
+    stop.addEventListener("click", () => {
+      clearInterval(myIntervalId);
+    });
+  </script>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM learing</title>
+  </head>
+  <body
+    style="
+      background-color: #212121;
+      text-align: center;
+      color: rgb(249, 251, 252);
+    "
+  >
+    <p id="one" class="two" target="_main">
+      Lorem ipsum dolor sit amet
+      <span style="display: none">test message!</span>
+    </p>
+
+    <h2 id="first">Lorem ipsum dolor sit.</h2>
+    <h2 class="second">Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+
+    <p class="list-para">Lorem1, ipsum dolor.</p>
+    <p class="list-para">Lorem2, ipsum dolor.</p>
+    <p class="list-para">Lorem3, ipsum dolor.</p>
+    <p class="list-para">Lorem4, ipsum dolor.</p>
+
+    <div class="parent">
+      <!-- this is a comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Frieday</div>
+      <div class="day">Saturday</div>
+      <div class="day">Sunday</div>
+    </div>
+
+    <ul
+      class="language"
+      style="
+        list-style: none;
+        background-color: rgb(211, 247, 247);
+        color: rgb(244, 24, 24);
+        width: 40%;
+      "
+    >
+      <li>Java</li>
+    </ul>
+  </body>
+
+  <script>
+    const para = document.getElementById("one");
+    //    console.log(para);
+
+    //    console.log( para.id);
+    //    console.log(para.className);
+
+    //    console.log(para.getAttribute("target"));
+    //    console.log(para.getAttribute("id"));
+
+    //    console.log(para.setAttribute("class", "three")); // value hamesa over write karti h isliye yedi dono class chahiye to
+    //    console.log(para.setAttribute("class", "two three" ));
+
+    // para.style.color= "red"
+    // para.style.backgroundColor= "#fff"
+    // para.style.padding= "15px"
+
+    // console.log(para.innerText);
+    // console.log(para.textContent);
+    // console.log(para.innerHTML);
+
+    // const byClass = document.getElementsByClassName("two");
+    // console.log(byClass);
+    // byClass[0].style.color= "red"
+
+    //=====================================================================================
+
+    //    console.log(document.querySelector("h2"));
+    //    console.log(document.querySelector("#first"));
+    //    console.log(document.querySelector(".second"));
+
+    // const queryAll = document.querySelectorAll("h2")
+    // console.log(queryAll);
+    // queryAll[0].style.color = "red"
+    // queryAll[1].style.color = "orange"
+    // queryAll[2].style.color = "pink"
+    // queryAll[3].style.color = "green"
+
+    // queryAll.forEach( (one) => {one.style.color= "green"} );
+
+    //===============================================================================
+
+    // const handleClass = document.getElementsByClassName("list-para");
+    // console.log(handleClass);
+
+    // const myConvertedArr= Array.from(handleClass);
+    // console.log(myConvertedArr);
+
+    // myConvertedArr.forEach( function (one) {
+    //     one.style.color= "red";
+    // } )
+
+    //============================================================================================
+
+    // const parent = document.querySelector('.parent')
+
+    // console.log(parent);
+    // console.log(parent.children);
+    // // console.log(parent.children[1].innerHTML);
+
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     console.log(parent.children[index].innerHTML);
+
+    // }
+
+    // parent.children[1].style.color = "red"
+
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // const oneDay = document.querySelector(".day")
+    // console.log(oneDay);
+    // console.log(oneDay.parentElement);
+    // console.log(oneDay.nextElementSibling.nextElementSibling);
+
+    // console.log("NODES: ", parent.childNodes);
+
+    //==========================================================================================
+
+    // const div = document.createElement("div")
+    // console.log(div);
+    // div.className = "main"
+    // div.id = Math.round(Math.random()*10+1)
+    // div.setAttribute("titel", "Titel name")
+    // div.style.backgroundColor = "red"
+    // div.style.padding = "13px"
+    // div.innerText = "I am Ashish Kumar Pandey"
+    // const addText = document.createTextNode(" My name is Ashish Kumar Pandey ")
+    // div.appendChild(addText)
+    // document.body.appendChild(div)
+
+    //====================================================================================================
+
+    // function addLang(lang) {
+    //     const li = document.createElement("li")
+    //     li.innerHTML = `${lang}`
+    //     document.querySelector(".language").appendChild(li)
+
+    // }
+
+    // addLang("Python")
+    // addLang("php")
+    // addLang("TypeScript")
+
+    // function addOptiLang(lang) {
+    //     const li = document.createElement("li");
+    //     li.appendChild(document.createTextNode(lang))
+    //     document.querySelector(".language").appendChild(li)
+
+    // }
+
+    // addOptiLang("JavaScript")
+    // addOptiLang("C++")
+    // addOptiLang("C")
+
+    //================================================================================================================
+
+    //Edit
+    //  const secondLang = document.querySelector("li:nth-child(2)")
+    //     console.log(secondLang);
+    //     //secondLang.innerHTML = "Mojo"
+    //     const newli = document.createElement('li')
+    //     newli.textContent = "Mojo"
+    //     secondLang.replaceWith(newli)
+
+    // const firstLang = document.querySelector("li:first-child")
+    //     firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //==========================================================================================
+
+    //remove
+    // const lastLang = document.querySelector('li:last-child')
+    //     lastLang.remove()
+  </script>
+</html>
